@@ -2,13 +2,11 @@
 
 BinaryHeap::BinaryHeap()
 {
-    // TODO: or not
 }
 
 
 bool BinaryHeap::Add(int uniqueId, double weight)
 {
-    // TODO:
     if(helper_idChecker(uniqueId) == true)
         return false;
     
@@ -23,7 +21,6 @@ bool BinaryHeap::Add(int uniqueId, double weight)
 
 bool BinaryHeap::PopHeap(int& outUniqueId, double& outWeight)
 {
-    // TODO:
     if(elements.size() == 0)
         return false;
     if(elements.size() == 1)
@@ -44,23 +41,18 @@ bool BinaryHeap::PopHeap(int& outUniqueId, double& outWeight)
         return true;
     }
         
-    
 }
 
 bool BinaryHeap::ChangePriority(int uniqueId, double newWeight)
 {
-    // TODO:
     if(ifExists(uniqueId,newWeight)){
         return true;
     }
     else
         return false;
-    
 }
 
 int BinaryHeap::HeapSize() const
 {
-    // TODO:
     return elements.size();
-    
 }
