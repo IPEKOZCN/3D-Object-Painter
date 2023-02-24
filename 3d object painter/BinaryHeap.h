@@ -12,7 +12,7 @@ class BinaryHeap
 {
     private:
     std::vector<HeapElement> elements;
-    // YENİ EKLEDİĞİM HELPER FONKSİYONLAR:
+   
     int parent(int i)
     {
         return (i-1)/2;
@@ -101,12 +101,7 @@ class BinaryHeap
         return false;
     }
 
-    
-
-
-
-    // Do not remove this the tester will utilize this
-    // to access the private parts.
+   
     friend class HW3Tester;
 
     protected:
