@@ -29,8 +29,7 @@ MeshGraph::MeshGraph(const std::vector<Double3>& vertexPositions,
 
 double MeshGraph::AverageDistanceBetweenVertices() const
 {
-    // TODO:
-    
+  
         double total_distance = 0;
         int edges = 0;
         for (int u = 0; u < vertices.size(); u++) {
@@ -48,7 +47,6 @@ double MeshGraph::AverageDistanceBetweenVertices() const
 
 double MeshGraph::AverageEdgePerVertex() const
 {
-    // TODO:
     double vertexCount = TotalVertexCount();
     double edgeCount = TotalEdgeCount();
     double result = edgeCount/vertexCount;
@@ -57,13 +55,13 @@ double MeshGraph::AverageEdgePerVertex() const
 
 int MeshGraph::TotalVertexCount() const
 {
-    // TODO:
+   
     return vertices.size();
 }
 
 int MeshGraph::TotalEdgeCount() const
 {
-    // TODO:
+   
     int edges = 0;
         for (int i = 0; i < vertices.size(); i++) {
             for (std::list<Vertex*>::const_iterator it = adjList[i].begin(); it != adjList[i].end(); it++) {
@@ -76,7 +74,7 @@ int MeshGraph::TotalEdgeCount() const
 
 int MeshGraph::VertexEdgeCount(int vertexId) const
 {
-    // TODO:
+   
     bool check = false;
     int i = 0;
     for(i=0;i<vertices.size();i++){
@@ -98,7 +96,7 @@ int MeshGraph::VertexEdgeCount(int vertexId) const
 void MeshGraph::ImmediateNeighbours(std::vector<int>& outVertexIds,
                                     int vertexId) const
 {
-    // TODO:
+   
     outVertexIds.clear();
     bool check = false;
     int i = 0;
@@ -288,7 +286,7 @@ void MeshGraph::PaintInRangeEuclidian(std::vector<Color>& outputColorAllVertex,
                                       double alpha) const
 {
     outputColorAllVertex.clear();
-    // TODO:
+   
     if(0 > vertexId || vertexId >= TotalVertexCount()) return;
     
     
@@ -347,7 +345,7 @@ void MeshGraph::PaintInRangeEuclidian(std::vector<Color>& outputColorAllVertex,
 void MeshGraph::WriteColorToFile(const std::vector<Color>& colors,
                                  const std::string& fileName)
 {
-    // IMPLEMENTED
+   
     std::stringstream s;
     for(int i = 0; i < static_cast<int>(colors.size()); i++)
     {
@@ -363,7 +361,7 @@ void MeshGraph::WriteColorToFile(const std::vector<Color>& colors,
 
 void MeshGraph::PrintColorToStdOut(const std::vector<Color>& colors)
 {
-    // IMPLEMENTED
+    
     for(int i = 0; i < static_cast<int>(colors.size()); i++)
     {
         std::cout << static_cast<int>(colors[i].r) << ", "
